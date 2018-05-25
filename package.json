@@ -66,6 +66,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-runtime": "^6.22.0",
     "bemto.jade": "^1.0.0",
+    "bemto.pug": "^2.1.0",
     "browser-sync": "^2.10.0",
     "cross-env": "^1.0.7",
     "debuga": "^1.0.2",
