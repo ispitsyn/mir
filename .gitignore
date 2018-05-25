@@ -40,3 +40,4 @@ node_modules
 npm-debug.log
 .happypack/
 package-lock.json
+!/app/blocks/layout-default/bemto/
