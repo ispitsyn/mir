@@ -1,0 +1,40 @@
+include bemto/bemto
+
+include ../scripts/scripts
+
+//common
+include ../button/button
+include ../link/link
+include ../title/title
+include ../lables/lables
+include ../counter/counter
+include ../group/group
+
+//layout
+include ../page/page
+include ../header/header
+include ../headline/headline
+include ../headline__title/headline__title
+include ../headline__description/headline__description
+include ../headline__remark/headline__remark
+include ../footer/footer
+
+//blocks
+include ../logo/logo
+include ../navigation/navigation
+include ../top-menu/top-menu
+include ../slider/slider
+include ../video/video
+include ../info-table/info-table
+include ../description/description
+
+include ../compas/compas
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page
+		+header()
+		+b.main
+			block content
+		+scripts(['app.min.js'])
