@@ -1,0 +1,46 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	+container()
+		+lables()._theme_green._size_xs._form_circle
+			+e.main
+				+e.icon.icon
+						img(src="images/lables/icon_percentages.png", alt="")
+				+e.text Специальные предложе- ния 
+		+lables()._theme_red._size_xs._form_circle
+			+e.main
+				+e.icon.icon
+						img(src="images/lables/icon_percentages.png", alt="")
+				+e.text Специальные предложе- ния 
+		+lables()._theme_blue._size_xs._form_circle
+			+e.main
+				+e.icon.icon
+						img(src="images/lables/icon_infrastructure.png", alt="")
+				+e.text инфра- структура 
+		+lables()._theme_yellow._size_xs._form_circle
+			+e.main
+				+e.icon.icon
+						img(src="images/lables/icon_video.png", alt="")
+				+e.text Видео  
+		+lables()._theme_pink._size_xs._form_circle
+			+e.main
+				+e.icon.icon
+						img(src="images/lables/icon_plan.png", alt="")
+				+e.text План всего  этажа 
+		+lables()._theme_purple._size_s._form_circle
+			+e.main
+				+e.text !{'<span>М<sup>2</sup></span>'}
+		
+		+lables()._theme_purple._size_m._form_circle
+			+e.main
+				+e.text 3
+
+		+lables()._theme_green._size_l._form_circle
+			+e.main
+				+e.text 5
+		+lables()._theme_purple._size_m._form_square
+			+e.main
+				+e.text 1

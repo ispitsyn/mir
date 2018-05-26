@@ -1,2 +1,79 @@
 .lables
 	display block
+	cursor pointer
+	transition transition--hover
+	&__text
+		line-height 1.2
+		text-align center
+		color color--default
+		text-transform uppercase
+	&__icon
+		display block
+	&__main
+		display flex
+		flex-wrap wrap
+		align-items center
+		justify-content center
+		flex-direction column
+		height 100%
+	&_size
+		&_xs
+			width 81px
+			height 81px
+			.lables__text
+				font-size 10px
+		&_s
+			width 43px
+			height 43px
+			.lables__text
+				font-size 17px
+				sup
+					font-size 10px
+		&_m
+			width 33px
+			height 33px
+			.lables__text
+				font-size 17px
+		&_l
+			width 24px
+			height 24px
+
+			.lables__text
+				font-size 18px
+	&_theme
+		&_green
+			background color--green
+			&.lables_form_circle:hover
+				background color--blue
+			&:hover
+				background color--purple
+		&_red
+			background color--red
+			&:hover
+				background color--purple
+		&_blue
+			background color--blue
+			&:hover
+				background color--purple
+		&_yellow
+			background color--yellow
+			&:hover
+				background color--purple
+		&_pink
+			background color--pink
+			&:hover
+				background color--purple
+		&_purple
+			background color--purple
+			&:hover
+				background color--blue
+	&_form
+		&_circle
+			border-radius 50%
+		&_square
+			border-radius 3px
+			.lables_size_m
+				width 28px
+				height 28px
+		
+
