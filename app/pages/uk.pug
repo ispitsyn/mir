@@ -4,12 +4,12 @@ block head
 	- var pageTitle = 'CSSSR Project Template';
 
 block content
-	+container()
+	+container().group.group__lables
 		+lables()._theme_green._size_xs._form_circle
 			+e.main
 				+e.icon.icon
-						img(src="images/lables/icon_percentages.png", alt="")
-				+e.text Специальные предложе- ния 
+						img(src="images/lables/icon_apartment.png", alt="")
+				+e.text Выбор  квартиры  
 		+lables()._theme_red._size_xs._form_circle
 			+e.main
 				+e.icon.icon
@@ -44,3 +44,12 @@ block content
 		+lables()._theme_purple._size_m._form_square
 			+e.main
 				+e.text 1
+	+container().group.group__icon
+		+icon()._size_m
+	+container().group.group__icon
+		+counter().animate.__progress-4
+			+e.LABEL.number 89
+			+e.border
+				+e.left-side.__half-circle
+				+e.rigth-side.__half-circle
+			+b.text свободных квартир  из 109 
