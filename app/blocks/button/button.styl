@@ -1,22 +1,81 @@
-.buttons
-	display block
+.button
+	display inline-block
+	height 40px
+	font-size 0
+	text-align center
+	color color--white
+	border-radius 5px
+	transition background .4s, box-shadow .4s
+	cursor pointer
 	&_size
-		&_xs
-			font-size: 1px
-			line-height: 1px
 		&_s
-			font-size: 1px
-			line-height: 1px
+			min-width 140px
 		&_m
-			font-size: 1px
-			line-height: 1px
+			min-width 184px
 		&_l
-			font-size: 1px
-			line-height: 1px
-		&_xl
-			font-size: 1px
-			line-height: 1px
-		&_xxl
-			font-size: 1px
-			line-height: 1px
-
+			min-width 278px
+	&_theme
+		&_red
+			background color--red
+			&:hover
+				background color--red
+				box-shadow shadow--button
+			&:active
+				box-shadow none
+		&_green
+			background color--green
+			&:hover
+				background color--green
+				box-shadow shadow--button
+			&:active
+				box-shadow none
+		&_purple
+			background color--black-purple
+			&:hover
+				background color--black-purple
+				box-shadow shadow--button
+			&:active
+				box-shadow none
+		&_br-red
+			color color--red
+			border 1px solid color--red
+			&:hover
+				color color--white
+				background-color color--black-purple
+				border-color color--black-purple
+				box-shadow shadow--button
+			&:active
+				box-shadow none
+		&_br-green
+			color color--green
+			border 1px solid color--green
+			&:hover
+				color color--white
+				background-color color--black-purple
+				border-color color--black-purple
+				box-shadow shadow--button
+			&:active
+				box-shadow none
+		&_br-purple
+			color color--black-purple
+			border 1px solid color--black-purple
+			&:hover
+				color color--white
+				background-color color--black-purple
+				border-color color--black-purple
+				box-shadow shadow--button
+			&:active
+				box-shadow none
+	&:before
+		display inline-block
+		width 0
+		height 100%
+		vertical-align middle
+		content ''
+	&__text
+		display inline-block
+		overflow hidden
+		max-width 100%
+		font-size f-size--default
+		vertical-align middle
+		text-overflow clip

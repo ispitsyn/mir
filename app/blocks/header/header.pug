@@ -1,3 +1,16 @@
 mixin header()
 	+b.header&attributes(attributes)
-		block
+		+e.logo
+			+logo()
+		+e.top-menu
+			+top-menu()
+		+e.contacts
+			+e.phone
+			+e.callback
+				+button({
+					mods:{
+						size: 's',
+						theme: 'red'
+					},
+					content: 'Заказать звонок'
+				})

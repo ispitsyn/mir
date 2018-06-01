@@ -1,3 +1,18 @@
-mixin top-menu()
-	+b.top-menu&attributes(attributes)
-		block
+mixin top-menu(currentItem, elements)
+	-
+		var defaultArr = [
+		{name:'Об объекте',link:'/'},
+		{name:'Выбрать квартиру',link:'/'},
+		{name:'Документация',link:'/'},
+		{name:'Способы покупки',link:'/'},
+		{name:'Отделка квартир',link:'/'}
+		]
+	+b.NAV.top-menu&attributes(attributes)
+		+e.UL.list
+			- var navigationArr = elements ? elements : defaultArr;
+			each element in navigationArr
+				+e.LI.item
+					+link({
+						mods: {theme:'green'},
+						content: {name: element.name, link: element.link}
+					})

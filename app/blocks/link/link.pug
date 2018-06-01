@@ -1,3 +1,12 @@
-mixin link()
-	+b.link&attributes(attributes)
-		block
+mixin link(params)
+	-
+		var blockName = 'link', classAll = '';
+		classAll += blockName;
+		for(var mod in params.mods) {
+			classAll += ' ' + blockName+'_'+mod+'_'+params.mods[mod];
+		}
+		attributes.class = classAll;
+		attributes.href = params.content.link;
+	+b.A&attributes(attributes)
+		+e.SPAN.text= params.content.name
+
