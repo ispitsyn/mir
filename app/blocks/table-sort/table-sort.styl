@@ -1,22 +1,84 @@
 .table-sort
-	display block
-	max-width 50%
-	float right
+	display block;
+	max-width 71%;
+	padding-right: 0
+	float right;
+	height calc(100vh - 340px)
+	overflow hidden
+	overflow-y auto
+	margin-bottom 52px
+	&__description
+		padding 15px 0 20px
+		text-align right
+		.group
+			margin-left 36px
 	&__table
 		table-layout fixed
 		width 100%
-		text-align: left
+		text-align left
 		border-top 2px solid #3f245b
 		color #2a195f
 		font-size 14px
 		tr
 			&.type
 				&_free
-					background color--green
+					background rgba(147,185,66, .08)
 				&_sale
-					background color--red
-			border-bottom 1px solid #eee
-		th
-			text-transform uppercase
+					background rgba(255,57,41, .08)
+			border-bottom 1px solid #a194af
+			&:hover {
+				background rgba(63,36,91,.08)
+			}
 		th, td
 			height 56px
+		th
+			position: relative
+			text-transform uppercase
+			&:before
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				margin-top: 3px;
+				width: 0;
+				height: 0;
+				border: 6px solid transparent;
+				border-top-color: #000;
+				transform: translateY(-50%);
+				transition transform 0.4s
+			&[aria-sort=ascending]
+				&:before
+					transform translateY(-100%) scaleY(-1);
+		td
+			padding-left 1.5%
+
+	&__th_entrance
+		padding-left calc(1.5% + 20px)
+		width 13.5%
+	&__th_floor
+		padding-left calc(1.5% + 20px)
+		width 9.2%
+	&__th_number
+		padding-left calc(1.5% + 20px)
+		width 6.4%
+	&__th_rooms
+		padding-left calc(1.5% + 20px)
+		width 11.7%
+	&__th_area
+		padding-left calc(1.5% + 20px)
+		width 16.3%
+	&__th_type
+		padding-left calc(1.5% + 20px)
+		width 23.4%
+	&__th_cost
+		padding-left  calc(1.5% + 20px)
+		width auto
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+	width 8px
+	margin-right: 4px
+	background #2a195f!important
+	opacity 1!important
+.mCSB_inside>.mCSB_container
+	margin-right 34px

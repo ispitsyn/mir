@@ -4,5 +4,15 @@ block head
 	- var pageTitle = 'CSSSR Project Template';
 
 block content
-	+table-filter()
-	+table-sort()
+	.container
+		+b.headline_table
+			+e.title
+				+b.title._size_22 Подбор квартиры по параметрам
+					span
+						b 109
+						| Квартир
+			+e.remark
+		+e.table-filter
+			+table-filter()
+		+e.table-sort
+			+table-sort()

@@ -1,5 +1,4 @@
 /*jslint browser: true*/ /*global  $*/
-import $ from 'jquery';
 import svg4everybody from 'svg4everybody';
 import 'owl.carousel';
 
@@ -305,4 +304,5 @@ $(() => {
 		});
 	});
 	new Tablesort(document.getElementById('table-sort'));
-})
+	$(".table-sort").mCustomScrollbar();
+});

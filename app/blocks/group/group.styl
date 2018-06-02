@@ -4,16 +4,60 @@
 	align-items center
 	flex-direction column
 	.title
-		margin-bottom 22px		
+		margin-bottom 22px
 		width 100%
+	.group__status
+		display inline-block
+		border-radius 3px
+		width 18px
+		height 18px
+		box-sizing border-box
+		border 2px solid
+		margin-left 8px
+	&_status
+		&_free
+			display inline-block
+			color color--purple
+			.group__label
+				font-size 12px
+				font-weight 500
+			.group__box
+				display flex
+				align-content center
+			.group__status
+				background transparent
+		&_sale
+			.group__label
+				font-size 12px
+				font-weight 500
+			.group__box
+				display flex
+				align-content center
+			display inline-block
+			color color--purple
+			.group__status
+				background color--red
+				border-color color--red
+		&_reserved
+			display inline-block
+			color color--purple
+			.group__label
+				font-size 12px
+				font-weight 500
+			.group__box
+				display flex
+				align-content center
+			.group__status
+				background color--green
+				border-color color--green
 	&_type
 		&_inline
 			margin-top 70px
-			margin-left 50px			
+			margin-left 50px
 		&_inline
 			flex-direction unset
 			.group__radio
-				margin-right 60px				
+				margin-right 60px
 				width auto
 	&__lables
 		width 100%
@@ -27,11 +71,11 @@
 			text-align center
 		&:after
 			position absolute
-			top 7px			
+			top 7px
 			right -60px
 			width 60px
 			height 2px
-			content ''			
+			content ''
 			background #e6e6e6
 		&:last-of-type
 				&:after

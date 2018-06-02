@@ -1,15 +1,28 @@
 mixin table-sort()
 	+b.table-sort&attributes(attributes)
+		+e.description
+			+b.group_status_reserved
+				+e.box
+					+e.SPAN.label Забронировано
+					+e.SPAN.status
+			+b.group_status_free
+				+e.box
+					+e.SPAN.label Свободно
+					+e.SPAN.status
+			+b.group_status_sale
+				+e.box
+					+e.SPAN.label Продано
+					+e.SPAN.status
 		+e.TABLE#table-sort.table
 			+e.THEAD.header
 				tr
-					th Подъезд
-					th Этаж
-					th №
-					th Комнат
-					th Площадь м2
-					th тип недвижимости
-					th стоимость руб.
+					+e.TH.th_entrance Подъезд
+					+e.TH.th_floor Этаж
+					+e.TH.th_number №
+					+e.TH.th_rooms Комнат
+					+e.TH.th_area Площадь м2
+					+e.TH.th_type тип недвижимости
+					+e.TH.th_cost стоимость руб.
 			+e.TBODY.main
 				- var n = 0;
 				while n < 20
