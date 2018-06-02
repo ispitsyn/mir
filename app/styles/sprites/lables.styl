@@ -104,26 +104,26 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 <i class="icon icon-home"></i>
 */
 spriteWidth($sprite) {
-  width: $sprite[4];
+	width: $sprite[4];
 }
 
 spriteHeight($sprite) {
-  height: $sprite[5];
+	height: $sprite[5];
 }
 
 spritePosition($sprite) {
-  background-position: $sprite[2] $sprite[3];
+	background-position: $sprite[2] $sprite[3];
 }
 
 spriteImage($sprite) {
-  background-image: url($sprite[8]);
+	background-image: url($sprite[8]);
 }
 
 sprite($sprite) {
-  spriteImage($sprite)
-  spritePosition($sprite)
-  spriteWidth($sprite)
-  spriteHeight($sprite)
+	spriteImage($sprite)
+	spritePosition($sprite)
+	spriteWidth($sprite)
+	spriteHeight($sprite)
 }
 
 
@@ -149,10 +149,10 @@ retinaSprite($retina_group) {
 	sprite($normal_sprite)
 
 	@media (-webkit-min-device-pixel-ratio: 2),
-				 (min-resolution: 192dpi) {
-		spriteImage($retina_sprite)
-		spriteBackgroundSize($normal_sprite)
-	}
+	(min-resolution: 192dpi) {
+spriteImage($retina_sprite)
+spriteBackgroundSize($normal_sprite)
+}
 }
 
 /*
@@ -165,12 +165,12 @@ This must be run when you have at least 2 sprites.
 sprites($spritesheet_sprites);
 */
 sprites($sprites) {
-  for $sprite in $sprites {
-    $sprite_name = $sprite[9];
-    .{$sprite_name} {
-      sprite($sprite);
-    }
-  }
+	for $sprite in $sprites {
+		$sprite_name = $sprite[9];
+		.{$sprite_name} {
+			sprite($sprite);
+		}
+	}
 }
 
 // The `retinaSprites` mixin generates a CSS rule and media query for retina groups

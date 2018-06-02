@@ -1,6 +1,25 @@
 .counter
+	display inline-block
+	width 45%
+	text-align center
+	vertical-align top
+	.text
+		margin-top 18px
+		padding 0 4px
+		line-height 20px
+	.chart
+		position relative
+
 	&__number
 		font-size 22px
 		font-weight bold
 		color rgb(147, 185, 66)
 		text-transform uppercase
+	&__number
+		position absolute
+		top 50%
+	&__number
+		width 72px
+		text-align center
+	&__number
+		transform translateY(-50%)

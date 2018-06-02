@@ -7,16 +7,55 @@ block content
 	+b.wrap
 		+b.container._iner_true._flex_true
 			+b.headline._iner_top
-					+e.title
-						+b.title._size_22 Трехкомнатная квартира
-							span №150
-					+e.remark
-		+b.side
-			+container()
-				+counter()
-					.chart(data-percent='89')
-						+e.LABEL.number 89
-					+b.text свободных квартир  из 109 
+				+e.title
+					+b.title._size_22 Трехкомнатная квартира
+						span №150
+				+e.remark
+		.flex
+			+b.side._type_apartment
+				+container()
+					+counter()
+						.chart(data-percent='39')
+							+e.LABEL.number 39
+						+b.text похожих квартир  из 109
+					+counter()
+						.chart(data-percent='85')
+							+e.LABEL.number 85
+						+b.text семей заказали дизайн своей квартиры
+				+description()
+					+b.A.link._decoration_solid._theme_green._size_14(href="#") Заказать дизайн от строительной компании
+					+b.title._size_18 Описание
+					+e.item
+						+e.cell
+							+b.title._size_14 Площадь м2
+						+e.cell
+							+b.title._size_14 35
+					+e.item
+						+e.cell
+							+b.title._size_14 Отделка квартиры
+						+e.cell
+							+b.title._size_14 Есть
+					+e.item
+						+e.cell
+							+b.title._size_14  Комнат
+						+e.cell
+							+b.title._size_14 3
+					+e.item
+						+e.cell
+							+b.title._size_14 Квартитра
+						+e.cell
+							+b.title._size_14 Продаеться
+					+e.price
+						+b.SPAN.title._size_14 ЦЕНА:
+						span.price 2 800 800
+						+b.SPAN.title._size_14  рублей
+			+b.front._type_apartament
+				+b.slider._type_apartment.slider-apartment
+					+e.item
+						img(src="/images/apartment.png", alt="")
+					+e.item
+						img(src="/images/apartment.png", alt="")
+
 	+b.side._right
 		+b.number
 			+e.count 3
@@ -26,26 +65,26 @@ block content
 				+lables()._theme_green._size_xs._form_circle
 					+e.main
 						+e.icon.icon
-								img(src="images/lables/icon_apartment.png", alt="")
-						+e.text Выбор  квартиры  
+							img(src="images/lables/icon_apartment.png", alt="")
+						+e.text Выбор  квартиры
 			+e.lables
 				+lables()._theme_red._size_xs._form_circle
 					+e.main
 						+e.icon.icon
-								img(src="images/lables/icon_percentages.png", alt="")
-						+e.text Специальные предложе- ния 
+							img(src="images/lables/icon_percentages.png", alt="")
+						+e.text Специальные предложе- ния
 			+e.lables
 				+lables()._theme_blue._size_xs._form_circle
 					+e.main
 						+e.icon.icon
-								img(src="images/lables/icon_infrastructure.png", alt="")
+							img(src="images/lables/icon_infrastructure.png", alt="")
 						+e.text инфра- структура
 			+e.lables
 				+lables()._theme_yellow._size_xs._form_circle
 					+e.main
 						+e.icon.icon
-								img(src="images/lables/icon_video.png", alt="")
-						+e.text Видео  
+							img(src="images/lables/icon_video.png", alt="")
+						+e.text Видео
 		+compas()
 	+b.footer
 		+b.container._iner_true._flex_true
