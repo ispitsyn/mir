@@ -1,0 +1,104 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	+b.side._right
+		+b.group
+			+e.lables
+				+lables()._theme_green._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_apartment.png", alt="")
+						+e.text Выбор  квартиры  
+			+e.lables
+				+lables()._theme_red._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_percentages.png", alt="")
+						+e.text Специальные предложе- ния 
+			+e.lables
+				+lables()._theme_blue._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_infrastructure.png", alt="")
+						+e.text инфра- структура
+			+e.lables
+				+lables()._theme_yellow._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_video.png", alt="")
+						+e.text Видео  
+			+lables()._theme_pink._size_xs._form_circle
+				+e.main
+					+e.icon.icon
+							img(src="images/lables/icon_plan.png", alt="")
+					+e.text План всего  этажа 
+		+compas()
+	+b.wrap
+		+b.container._iner_true._flex_true
+			+b.headline._iner_top
+					+e.title
+						+b.title._size_22 3 этаж
+					+e.remark
+			+b.group._type_inline
+				+b.title._size_14 Подъезд
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 1
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 2				
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 3				
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 4				
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 5				
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 6				
+				+e.radio
+					+lables()._theme_purple._size_16._form_circle
+					+b.text._theme_purple 7				
+		+b.container._iner_true
+			+b.svg-map._type_floor._arrow_true
+				+b.A.arrow.arrow__left(href="#")
+				img(src="images/map.png", alt="")
+				+b.A.arrow.arrow__right(href="#")
+			+description()._flex_true
+				+e.item
+					+e.name
+						+b.title._size_14 Номер квартиры
+					+e.content 123
+				+e.item
+					+e.name
+						+b.title._size_14 Комнаты
+					+e.content 3
+				+e.item
+					+e.name
+						+b.title._size_14 Отделка квартиры
+					+e.content Есть
+				+e.item
+					+e.name
+						+b.title._size_14 Площадь м
+							sup 2
+					+e.content 35
+				+e.item
+					+e.name
+						+b.title._size_14 Квартира
+					+e.content Продается
+	+b.footer
+		+b.container._iner_true._flex_true
+			.footer__logo
+				img(src="images/logo-mir.png", alt="")
+				span.footer__copyright © СК МИР, 2018
+			.footer__social
+				+b.social
+					+e.A.resource._vkontakte.link(href="$")
+					+e.A.resource._facebook.link(href="$")
+					+e.A.resource._instagram.link(href="$")

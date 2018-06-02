@@ -1,0 +1,22 @@
+.table-sort
+	display block
+	max-width 50%
+	float right
+	&__table
+		table-layout fixed
+		width 100%
+		text-align: left
+		border-top 2px solid #3f245b
+		color #2a195f
+		font-size 14px
+		tr
+			&.type
+				&_free
+					background color--green
+				&_sale
+					background color--red
+			border-bottom 1px solid #eee
+		th
+			text-transform uppercase
+		th, td
+			height 56px

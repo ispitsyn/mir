@@ -1,0 +1,31 @@
+mixin table-sort()
+	+b.table-sort&attributes(attributes)
+		+e.TABLE#table-sort.table
+			+e.THEAD.header
+				tr
+					th Подъезд
+					th Этаж
+					th №
+					th Комнат
+					th Площадь м2
+					th тип недвижимости
+					th стоимость руб.
+			+e.TBODY.main
+				- var n = 0;
+				while n < 20
+					-
+						var arClass = '';
+						function getDecimal(num) {
+							return num - Math.floor(num);
+						};
+						getDecimal(n / 4) == 0 ? arClass = 'type_sale' :  getDecimal(n / 3) == 0 ? arClass = 'type_free' : arClass = '';
+					tr(class= arClass)
+						td 4
+						td 3
+						td 314
+						td 3
+						td 44
+						td Жильё
+						td 8 765 000
+					- n++;
+			+e.TFOOT.footer

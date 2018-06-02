@@ -1,2 +1,19 @@
 .main
+	position relative
 	display block
+	@media (min-height: 800px)
+			height calc(100vh - 60px)
+	&:before 
+		display table
+		content ''		
+	&:after 
+		display table
+		clear both
+		content ''
+.flex
+	display flex
+	height 100%
+.rear
+	height 100%
+.wrap
+	height 100%

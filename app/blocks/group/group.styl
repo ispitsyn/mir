@@ -1,2 +1,38 @@
 .group
-	display block
+	display flex
+	flex-wrap wrap
+	align-items center
+	flex-direction column
+	.title
+		margin-bottom 22px		
+		width 100%
+	&_type
+		&_inline
+			margin-top 70px
+			margin-left 50px			
+		&_inline
+			flex-direction unset
+			.group__radio
+				margin-right 60px				
+				width auto
+	&__lables
+		width 100%
+		.lables
+			margin-right 20px
+	&__radio
+		position relative
+		width 100%
+		.text
+			margin-top 9px
+			text-align center
+		&:after
+			position absolute
+			top 7px			
+			right -60px
+			width 60px
+			height 2px
+			content ''			
+			background #e6e6e6
+		&:last-of-type
+				&:after
+					display none
