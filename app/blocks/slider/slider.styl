@@ -43,6 +43,25 @@
         -webkit-backface-visibility hidden
         -webkit-touch-callout none
         -webkit-tap-highlight-color transparent
+	.slider__prev
+		background-image url(/icons/arrow.png)
+		transform	rotate(-180deg)
+	.slider__next
+		position absolute
+		right 0
+		background-image url(/icons/arrow.png)
+	.slider__nav
+		position absolute
+		top 50%
+		left -7%		
+		width 115%
+		height 115px		
+		transform translateY(-50%)
+		button 
+			border none
+		button
+			width 11px
+			height 45px
 .slider-main
 	.slider__dots
 		position absolute
@@ -51,4 +70,6 @@
 		transform translateY(-50%)
 		.slider__dot
 			display block
-		
+.slider_type_apartment
+	margin-top 20px
+	margin-left 43px
