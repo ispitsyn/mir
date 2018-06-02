@@ -39,8 +39,9 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	+page
-		+header()
+		block sharedVars
+		+header(headerType)
 		+b.main
 			block content
-		+footer()
-		+scripts(['tablesort.min.js','tablesort.number.min.js','jquery.min.js','jquery.mCustomScrollbar.concat.min.js','app.min.js'])
+		+footer(footerType)
+		+scripts(['tablesort.min.js', 'tablesort.number.min.js', 'jquery.min.js', 'jquery.mCustomScrollbar.concat.min.js', 'app.min.js'])

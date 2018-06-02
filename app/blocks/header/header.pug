@@ -1,7 +1,10 @@
-mixin header()
+mixin header(headerType)
 	+b.header&attributes(attributes)
 		+e.logo
-			+logo()
+			if(headerType === 'main')
+				+logo(1)
+			else
+				+logo(2)
 		+e.top-menu
 			+top-menu()
 		+e.contacts

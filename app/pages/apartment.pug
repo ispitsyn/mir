@@ -11,17 +11,20 @@ block content
 					+b.title._size_22 Трехкомнатная квартира
 						span №150
 				+e.remark
-		.flex
+		.flex.container
 			+b.side._type_apartment
-				+container()
-					+counter()
-						.chart(data-percent='39')
-							+e.LABEL.number 39
-						+b.text похожих квартир  из 109
-					+counter()
-						.chart(data-percent='85')
-							+e.LABEL.number 85
-						+b.text семей заказали дизайн своей квартиры
+				+counter()
+					.chart(data-percent='39')
+						+e.LABEL.number 39
+					+b.text похожих квартир
+						br
+						| из 109
+				+counter()
+					.chart(data-percent='85')
+						+e.LABEL.number 85
+					+b.text семей заказали дизайн
+						br
+						| своей квартиры
 				+description()
 					+b.A.link._decoration_solid._theme_green._size_14(href="#") Заказать дизайн от строительной компании
 					+b.title._size_18 Описание
@@ -86,7 +89,3 @@ block content
 							img(src="images/lables/icon_video.png", alt="")
 						+e.text Видео
 		+compas()
-	+b.footer
-		+b.container._iner_true._flex_true
-			.footer__text Все права на публикуемые на сайте материалы принадлежат ООО “МИР”. Любая информация, представленная на этом сайте, носит  исключительно информационный характер и ни при каких условиях  не является публичной офертой, определяемой положениями статьи 437 ГК РФ
-			.footer__copyright © СК МИР, 2018

@@ -1,3 +1,13 @@
-mixin logo()
+mixin logo(logoId)
+	-
+		var imageSrc = '';
+		var imageClass = '';
+		if(logoId === 1){
+			imageSrc = 	'images/logo-mir.png';
+			imageClass = 'logo_type_main';
+		} else if(logoId === 2) {
+			imageSrc = 	'images/logo.png';
+		}
+		attributes.class = imageClass;
 	+b.logo&attributes(attributes)
-		img.image(src='images/logo.png')
+		img.image(src= imageSrc)
