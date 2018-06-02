@@ -16,5 +16,5 @@ gulp.task('watch', () => {
 	watch('app/resources/**/*', () => runSequence('copy', bs.reload));
 	watch('app/icons/**/*.svg', () => runSequence('icons', bs.reload));
 
-	gulp.start('scripts:watch');
+	// gulp.start('scripts:watch');
 });
