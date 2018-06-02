@@ -1,0 +1,44 @@
+mixin table-sort()
+	+b.table-sort&attributes(attributes)
+		+e.description
+			+b.group_status_reserved
+				+e.box
+					+e.SPAN.label Забронировано
+					+e.SPAN.status
+			+b.group_status_free
+				+e.box
+					+e.SPAN.label Свободно
+					+e.SPAN.status
+			+b.group_status_sale
+				+e.box
+					+e.SPAN.label Продано
+					+e.SPAN.status
+		+e.TABLE#table-sort.table
+			+e.THEAD.header
+				tr
+					+e.TH.th_entrance Подъезд
+					+e.TH.th_floor Этаж
+					+e.TH.th_number №
+					+e.TH.th_rooms Комнат
+					+e.TH.th_area Площадь м2
+					+e.TH.th_type тип недвижимости
+					+e.TH.th_cost стоимость руб.
+			+e.TBODY.main
+				- var n = 0;
+				while n < 20
+					-
+						var arClass = '';
+						function getDecimal(num) {
+							return num - Math.floor(num);
+						};
+						getDecimal(n / 4) == 0 ? arClass = 'type_sale' :  getDecimal(n / 3) == 0 ? arClass = 'type_free' : arClass = '';
+					tr(class= arClass)
+						td 4
+						td 3
+						td 314
+						td 3
+						td 44
+						td Жильё
+						td 8 765 000
+					- n++;
+			+e.TFOOT.footer

@@ -1,5 +1,20 @@
 .top-menu
 	display block
+	color #4a4a4a
 	&__list
 		display flex
 		justify-content space-between
+	&__item
+		margin-right 22px
+		font-size 15px
+		font-weight 700
+		&:last-of-type
+			margin-right 0
+		&:hover
+			color color--green
+		.link
+			color inherit
+	@media (max-width 1280px)
+		&__item
+			font-size 14px
+			margin-right 20px

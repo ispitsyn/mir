@@ -5,10 +5,12 @@ include ../scripts/scripts
 //common
 include ../button/button
 include ../link/link
+include ../icon/icon
 include ../title/title
 include ../lables/lables
 include ../counter/counter
 include ../group/group
+include ../container/container
 
 //layout
 include ../page/page
@@ -28,6 +30,9 @@ include ../video/video
 include ../info-table/info-table
 include ../description/description
 
+include ../table-filter/table-filter
+include ../table-sort/table-sort
+
 include ../compas/compas
 
 doctype html
@@ -38,4 +43,4 @@ html(lang='ru')
 		+b.main
 			block content
 		+footer()
-		+scripts(['app.min.js'])
+		+scripts(['tablesort.min.js','tablesort.number.min.js','jquery.min.js','jquery.mCustomScrollbar.concat.min.js','app.min.js'])

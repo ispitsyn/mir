@@ -1,0 +1,89 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	+b.rear
+		+b.svg-map._type_housing(style='background-image: url(images/section.png)')
+	+b.side._right
+		+b.number
+			+e.count 5
+			+e.text дом
+		+b.group
+			+e.lables
+				+lables()._theme_green._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_apartment.png", alt="")
+						+e.text Выбор  квартиры  
+			+e.lables
+				+lables()._theme_red._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_percentages.png", alt="")
+						+e.text Специальные предложе- ния 
+			+e.lables
+				+lables()._theme_blue._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_infrastructure.png", alt="")
+						+e.text инфра- структура
+			+e.lables
+				+lables()._theme_yellow._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_video.png", alt="")
+						+e.text Видео  
+		+compas()
+	+b.side._left
+		+b.headline
+			+e.title
+				+b.title._size_22 Выбор квартир
+			+e.remark
+			+e.description Для просмотра поэтажных планировок и выбора квартир выберите один из корпусов ЖК «Счастье».
+		+b.title._size_14 Подъезд
+		+b.group
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 1
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 2
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 3
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 4
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 5
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 6
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 7
+			+e.radio
+				+lables()._theme_purple._size_m._form_square
+					+e.main
+						+e.text 8
+		
+	+b.footer
+		+b.container._iner_true._flex_true
+			.footer__logo
+				img(src="images/logo-mir.png", alt="")
+				span.footer__copyright © СК МИР, 2018
+			.footer__social
+				+b.social
+					+e.A.resource._vkontakte.link(href="$")
+					+e.A.resource._facebook.link(href="$")
+					+e.A.resource._instagram.link(href="$")

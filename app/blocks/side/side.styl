@@ -1,2 +1,68 @@
 .side
-	display block
+	&_type
+		&_morda
+			width calc(100% - 71%)
+	&_theme
+		&_light
+			background #ffffff
+	&_left
+		position absolute
+		top 0
+		left 4.3%
+		bottom 0
+		float none
+		.headline
+			width 270px
+		.headline
+			margin-bottom 41px			
+		.group
+			margin-top 28px
+			align-items end
+		.group__radio
+			position relative
+			margin-bottom 12px
+			width 28px
+			&:last-of-type
+				&:before
+					display none
+			&:after
+				display none
+			&:before
+				position absolute
+				left 50%
+				bottom -12px
+				width 2px
+				height 12px
+				content ''				
+				background #2a195f
+	&_right
+		position absolute
+		top 0
+		right 3.1%
+		bottom 0
+		float none
+		width 8%				
+		.number
+			margin-top 15px
+			margin-right 13px
+		.group
+			position absolute			
+			top 160px
+			margin-right 16px			
+		.group__lables
+			margin-bottom 12px
+		.group__lables .lables
+			margin-right 0
+		.compas
+			position absolute
+			bottom 120px
+	&_iner
+		padding-right 50px
+		padding-left 42px
+	.logo
+		margin-top 23px
+		margin-bottom 16px
+	.navigation
+		margin-top 19p
+	.video
+		margin-bottom 34px

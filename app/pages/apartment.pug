@@ -1,0 +1,53 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	+b.wrap
+		+b.container._iner_true._flex_true
+			+b.headline._iner_top
+					+e.title
+						+b.title._size_22 Трехкомнатная квартира
+							span №150
+					+e.remark
+		+b.side
+			+container()
+				+counter()
+					.chart(data-percent='89')
+						+e.LABEL.number 89
+					+b.text свободных квартир  из 109 
+	+b.side._right
+		+b.number
+			+e.count 3
+			+e.text этаж
+		+b.group
+			+e.lables
+				+lables()._theme_green._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_apartment.png", alt="")
+						+e.text Выбор  квартиры  
+			+e.lables
+				+lables()._theme_red._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_percentages.png", alt="")
+						+e.text Специальные предложе- ния 
+			+e.lables
+				+lables()._theme_blue._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_infrastructure.png", alt="")
+						+e.text инфра- структура
+			+e.lables
+				+lables()._theme_yellow._size_xs._form_circle
+					+e.main
+						+e.icon.icon
+								img(src="images/lables/icon_video.png", alt="")
+						+e.text Видео  
+		+compas()
+	+b.footer
+		+b.container._iner_true._flex_true
+			.footer__text Все права на публикуемые на сайте материалы принадлежат ООО “МИР”. Любая информация, представленная на этом сайте, носит  исключительно информационный характер и ни при каких условиях  не является публичной офертой, определяемой положениями статьи 437 ГК РФ
+			.footer__copyright © СК МИР, 2018

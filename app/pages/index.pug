@@ -4,43 +4,34 @@ block head
 	- var pageTitle = 'CSSSR Project Template';
 
 block content
-	+button({
-		mods: {size: 's', theme: 'red'},
-		content: 'Заказать звонок'
-	})
-	+button({
-		mods: {size: 'm', theme: 'red'},
-		content: 'Заказать звонок'
-	})
-	+button({
-		mods: {size: 'l', theme: 'red'},
-		content: 'Заказать звонок'
-	})
-	br
-	br
-	+button({
-		mods: {size: 'm', theme: 'red'},
-		content: 'Заказать звонок'
-	})
-	+button({
-		mods: {size: 'm', theme: 'green'},
-		content: 'Заказать звонок'
-	})
-	+button({
-		mods: {size: 'm', theme: 'purple'},
-		content: 'Заказать звонок'
-	})
-	br
-	br
-	+button({
-		mods: {size: 'm', theme: 'br-red'},
-		content: 'Заказать звонок'
-	})
-	+button({
-		mods: {size: 'm', theme: 'br-green'},
-		content: 'Заказать звонок'
-	})
-	+button({
-		mods: {size: 'm', theme: 'br-purple'},
-		content: 'Заказать звонок'
-	})
+	+b.flex
+		+b.front._type_morda
+			+b.slider.slider-main
+				+e.item(style='background-image: url(images/slider.png)')
+				+e.item(style='background-image: url(images/slider.png)') red
+			+b.social._type_main
+				+e.A.resource._vkontakte.link(href="$")
+				+e.A.resource._facebook.link(href="$")
+				+e.A.resource._instagram.link(href="$")
+
+		+b.side._type_morda._theme_light._iner
+			+b.logo._size_m
+				img.image(src='images/logo.png')
+			+b.text
+				span But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was.
+			+b.navigation
+				+e.A.item(href='#').link._theme_default
+					+b.icon._type_home
+					span.link__text  Об объекте
+				+e.A.item(href='#').link._theme_default
+					+b.icon._type_flag
+					span.link__text  ЖК на карте
+				+e.A.item(href='#').link._theme_default
+					+b.icon._type_coffe
+					span.link__text  Инфраструктура
+				+e.A.item(href='#').link._theme_default
+					+b.icon._type_mon
+					span.link__text Фоторепортаж
+			+b.video(style='background-image: url(images/video.png)')
+				+e.content
+					span.video__text Видео о ЖК Счастье
