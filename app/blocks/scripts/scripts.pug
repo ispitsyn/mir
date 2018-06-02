@@ -1,5 +1,10 @@
 mixin scripts(scripts)
 	each src in scripts
-		- var isExternalScript = /^(?:https?\:)?\/\//i;
-		- src = isExternalScript.test(src) ? src : '/assets/scripts/' + src;
+		-
+			var isExternalScript = /^(?:https?\:)?\/\//i;
+			if(src === 'app.min.js') {
+				src = isExternalScript.test(src) ? src : '/assets/scripts/' + src;
+			} else {
+				src = isExternalScript.test(src) ? src : '/scripts/' + src;
+			}
 		script(src=src)
