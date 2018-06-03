@@ -1,6 +1,7 @@
 .link
-	display block
+	display inline-block
 	text-decoration none
+	position relative
 	&hover
 		color color--green
 	&_theme
@@ -14,9 +15,33 @@
 		&_green
 			font-weight bold
 			color rgb(147, 185, 66)
+		&_purple
+			font-weight bold
+			color color--purple
+		&_pink
+			font-weight bold
+			color color--pink
 	&_decoration
 		&_solid
-			text-decoration underline
+			&:after
+				content ''
+				display block
+				width 100%
+				height 0
+				position absolute
+				bottom -3px
+				left 0
+				border 0.5px solid
+		&_dashed
+			&:after
+				content ''
+				display block
+				width 100%
+				height 2px
+				position absolute
+				bottom -3px
+				left 0
+				background #fff url('../../images/border_dashed.png') repeat-x
 	&_size
 		&_14
 			font-size 14px
