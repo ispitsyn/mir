@@ -5,13 +5,13 @@ block head
 
 block content
 	.container
-		+b.headline_table(data-tooltip="images/plan.jpg")
+		+b.headline_table
 			+e.title
 				+b.title._size_22 Подбор квартиры по параметрам
 					span
 						b 109
 						| Квартир
-			+e.remark
+				+e.remark
 		+e.table-filter-and-count
 			+e.table-filter-counters
 				+counter()
