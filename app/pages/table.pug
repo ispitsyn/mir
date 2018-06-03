@@ -5,14 +5,30 @@ block head
 
 block content
 	.container
-		+b.headline_table
+		+b.headline_table(data-tooltip="images/plan.jpg")
 			+e.title
 				+b.title._size_22 Подбор квартиры по параметрам
 					span
 						b 109
 						| Квартир
 			+e.remark
-		+e.table-filter
+		+e.table-filter-and-count
+			+e.table-filter-counters
+				+counter()
+					.chart(data-percent='92')
+						+e.LABEL.number 100
+					+b.text свободных квартир
+						br
+						| из 109
+				+counter()
+					.chart(data-percent='75')
+						+e.LABEL.number 150
+					+b.text свободных кладовых
+						br
+						| комнат из 200
+			+table-filter()
+			+table-filter()
+			+table-filter()
 			+table-filter()
 		+e.table-sort
 			+table-sort()

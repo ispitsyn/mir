@@ -1,3 +1,9 @@
 mixin table-filter()
 	+b.table-filter&attributes(attributes)
-		block
+		+e.slider-box
+			+e.INPUT.slider-value_min(disabled, value='1')
+			+e.slider
+			+e.INPUT.slider-value_max(disabled, value='14')
+		+e.description Этаж
+
+

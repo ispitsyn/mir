@@ -1,7 +1,7 @@
 mixin table-sort()
 	+b.table-sort&attributes(attributes)
 		+e.description
-			+b.group_status_reserved
+			+b.group_status_reserved(data-tooltip="images/plan.jpg")
 				+e.box
 					+e.SPAN.label Забронировано
 					+e.SPAN.status
@@ -32,12 +32,12 @@ mixin table-sort()
 							return num - Math.floor(num);
 						};
 						getDecimal(n / 4) == 0 ? arClass = 'type_sale' :  getDecimal(n / 3) == 0 ? arClass = 'type_free' : arClass = '';
-					tr(class= arClass)
-						td 4
-						td 3
-						td 314
-						td 3
-						td 44
+					tr(class= arClass, data-tooltip="images/plan.jpg")
+						td= 4
+						td= n + 3
+						td= 314 - n
+						td= n + 3
+						td= 44 - n
 						td Жильё
 						td 8 765 000
 					- n++;

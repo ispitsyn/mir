@@ -7,7 +7,12 @@ mixin logo(logoId)
 			imageClass = 'logo_type_main';
 		} else if(logoId === 2) {
 			imageSrc = 	'images/logo.png';
+			attributes.href = '/';
 		}
 		attributes.class = imageClass;
-	+b.logo&attributes(attributes)
-		img.image(src= imageSrc)
+	if(logoId === 1)
+		+b.SPAN.logo&attributes(attributes)
+			img.image(src= imageSrc)
+	else
+		+b.A.logo&attributes(attributes)
+			img.image(src= imageSrc)

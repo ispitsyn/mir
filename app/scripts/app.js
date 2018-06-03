@@ -307,4 +307,25 @@ $(() => {
 	});
 	new Tablesort(document.getElementById('table-sort'));
 	$(".table-sort").mCustomScrollbar();
-})
+	$('.table-filter__slider').slider({
+		orientation: "horizontal",
+		range: "min",
+		min: 1,
+		max: 14,
+		value: 7
+	});
+	$(document).tooltip({
+		items: "[data-tooltip]",
+		position: { my: "left+30 center", at: "right center" },
+		content: function () {
+			return '' +
+				'<div class="tooltip-box">'+
+					'<img class="map" alt="" src="images/plan.jpg">' +
+					'<div class="button button_size_m button_theme_green">' +
+						'<span class="button__text">Купить</span>' +
+					'</div>'+
+				'</div>';
+		}
+	});
+
+});

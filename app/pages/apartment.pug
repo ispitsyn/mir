@@ -9,8 +9,12 @@ block content
 			+b.headline._iner_top
 				+e.title
 					+b.title._size_22 Трехкомнатная квартира
-						span №150
-				+e.remark
+						span
+							b №150
+					+e.remark
+				+e.description
+					+button({mods:{theme: 'green',size: 's'},content:'Квартира №150'})
+
 		.flex.container
 			+b.side._type_apartment
 				+counter()
@@ -40,7 +44,7 @@ block content
 							+b.title._size_14 Есть
 					+e.item
 						+e.cell
-							+b.title._size_14  Комнат
+							+b.title._size_14  Комнат
 						+e.cell
 							+b.title._size_14 3
 					+e.item
@@ -58,7 +62,10 @@ block content
 						img(src="/images/apartment.png", alt="")
 					+e.item
 						img(src="/images/apartment.png", alt="")
-
+			+b.footline.container
+				+e.buttons
+					+button({mods: {theme: 'green', size: 's'}, content: 'Кладовки'})
+					+button({mods: {theme: 'br-green', size: 's'}, content: 'Парковки'})
 	+b.side._right
 		+b.number
 			+e.count 3

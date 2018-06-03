@@ -1,2 +1,42 @@
 .table-filter
 	display block
+	margin-bottom: 52px
+	&__slider-box
+		position relative
+		padding 15px 0
+	&__description
+		text-align center
+	&__slider-value
+		display block
+		border-radius 50%
+		width 40px
+		height 40px
+		border none
+		outline none
+		background-color #2a195f
+		line-height 38px
+		color #fff
+		text-align center
+		position absolute
+		transform translateY(-50%)
+		margin-top -1px
+		z-index 9
+		&_min
+			left 0
+		&_max
+			right 0
+	&__slider
+		&.ui-slider-horizontal
+			border none!important
+			background-color #d7d7d7
+			height 2px
+			box-sizing border-box
+			margin: 0
+		.ui-widget-header
+			background-color #2a195f
+		.ui-slider-handle
+			width 9px
+			height 9px
+			border none
+			background-color #2a195f
+			border-radius 50%
