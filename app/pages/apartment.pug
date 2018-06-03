@@ -14,7 +14,6 @@ block content
 					+e.remark
 				+e.description
 					+button({mods:{theme: 'green',size: 's'},content:'Квартира №150'})
-
 		.flex.container
 			+b.side._type_apartment
 				+counter()
@@ -62,10 +61,6 @@ block content
 						img(src="/images/apartment.png", alt="")
 					+e.item
 						img(src="/images/apartment.png", alt="")
-			+b.footline.container
-				+e.buttons
-					+button({mods: {theme: 'green', size: 's'}, content: 'Кладовки'})
-					+button({mods: {theme: 'br-green', size: 's'}, content: 'Парковки'})
 	+b.side._right
 		+b.number
 			+e.count 3
@@ -96,3 +91,9 @@ block content
 							img(src="images/lables/icon_video.png", alt="")
 						+e.text Видео
 		+compas()
+	+b.footline.container
+		+b.A.link._decoration_solid._theme_green._size_14(href="#") План эвакуации
+		+e.buttons
+			+button({mods: {theme: 'green', size: 's'}, content: 'Кладовки'})
+			+button({mods: {theme: 'br-green', size: 's'}, content: 'Парковки'})
+			+b.A.link._decoration_solid._theme_green._size_14(href="#") Похожие запросы
